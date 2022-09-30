@@ -39,9 +39,9 @@
                 </div>
             <form id="formAdd" onsubmit="criar()" action="">
                 <div class="modal-body">
-                    <input type="text" class="form-control-lg mb-3" pattern="[A-Za-z]{2,}" id="input_nome" placeholder="Nome">
+                    <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){2,}" id="input_nome" placeholder="Nome">
                     <input type="number" class="form-control-lg mb-3" pattern="[0-9]{8,}" id="input_telefone" placeholder="Telefone">
-                    <input type="text" class="form-control-lg mb-3" pattern="[A-Za-z]{3,}" id="input_cidade" placeholder="Cidade">
+                    <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){3,}" id="input_cidade" placeholder="Cidade">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -59,12 +59,12 @@
                     <h5 class="modal-title" id="exampleModalLabel">Editar Contato</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            <form id="formAdd" onsubmit="editar()" action="">
+            <form id="formEdit" onsubmit="editar()" action="">
                 <div class="modal-body">
                     <input type="hidden" class="form-control-lg mb-3" id="editar_id">
-                    <input type="text" class="form-control-lg mb-3" pattern="[A-Za-z]{2,}" id="editar_nome" placeholder="Nome">
+                    <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){2,}" id="editar_nome" placeholder="Nome">
                     <input type="number" class="form-control-lg mb-3" pattern="[0-9]{8,}" id="editar_telefone" placeholder="Telefone">
-                    <input type="text" class="form-control-lg mb-3" pattern="[A-Za-z]{3,}" id="editar_cidade" placeholder="Cidade">
+                    <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){3,}" id="editar_cidade" placeholder="Cidade">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>

@@ -1,28 +1,28 @@
 {
-    "Telefones": [
-        {
-            "id": 1,
-            "nome": "Eu",
-            "numero": "987654321",
-            "cidade": "Fortaleza"
-        },
-        {
-            "id": 2,
-            "nome": "Cremosa",
-            "numero": "978654321",
-            "cidade": "Fortaleza"
-        },
-        {
-            "id": 3,
-            "nome": "Mãe",
-            "numero": "976854321",
-            "cidade": "Fortaleza"
-        },
-        {
-            "id": 4,
-            "nome": "Pai",
-            "numero": "976584321",
-            "cidade": "Fortaleza"
-        }
-    ]
+  "Telefones": [
+    {
+      "id": 1,
+      "nome": "Eu",
+      "numero": "987654321",
+      "cidade": "Fortaleza"
+    },
+    {
+      "id": 2,
+      "nome": "Cremosa",
+      "numero": "978654321",
+      "cidade": "Fortaleza"
+    },
+    {
+      "id": 3,
+      "nome": "Mãe",
+      "numero": "976854321",
+      "cidade": "Fortaleza"
+    },
+    {
+      "id": 4,
+      "nome": "Pai",
+      "numero": "976584321",
+      "cidade": "Fortaleza"
+    }
+  ]
 }

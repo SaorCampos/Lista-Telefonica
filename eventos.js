@@ -35,4 +35,28 @@ async function excluir (id) {
     });
     atualizarLista();
 }
+function criar(){
+    event.preventDefault();
+    let contato = {
+        nome: document.getElementById('input_nome').value,
+        numero: document.getElementById('input_telefone').value,
+        cidade: document.getElementById('input_cidade').value,
+    }
+    fetch(API_URL +'/Telefones', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contato)
+    }).then((response) => response.json())
+    .then((data) => {
+        atualizarLista();
+        alert("Contato adicionado com sucesso")
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+    console.error('Error:', error);
+    });
+    formAdd.reset()
+}
 atualizarLista();
