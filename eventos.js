@@ -14,10 +14,10 @@ function atualizarLista() {
                 <td>${cadaContato.numero}</td>
                 <td>${cadaContato.cidade}</td>
                 <td>
-                    <button onclick="excluir(${cadaContato.id})" class="btn btn-danger">
+                    <button onclick="excluir(${cadaContato.id})" class="btn btn btn-outline-danger">
                         Excluir
                     </button>
-                    <button onclick="chamarContato(${cadaContato.id})" type="button" class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditar">
+                    <button onclick="chamarContato(${cadaContato.id})" type="button" class="btn btn btn-outline-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditar">
                     Editar
                     </button>
                 </td>
@@ -41,6 +41,10 @@ function criar(){
         nome: document.getElementById('input_nome').value,
         numero: document.getElementById('input_telefone').value,
         cidade: document.getElementById('input_cidade').value,
+    }
+    if(contato.nome ==="" || contato.numero ==="" || contato.cidade ===""){
+        alert('Dados invalidos');
+        return;
     }
     fetch(API_URL +'/Telefones', {
         method: 'POST',
