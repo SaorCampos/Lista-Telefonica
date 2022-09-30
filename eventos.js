@@ -17,7 +17,7 @@ function atualizarLista() {
                     <button onclick="excluir(${cadaContato.id})" class="btn btn-danger">
                         Excluir
                     </button>
-                    <button onclick="chamarProduto(${cadaContato.id})" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <button onclick="chamarContato(${cadaContato.id})" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                     Editar
                     </button>
                 </td>
@@ -58,5 +58,41 @@ function criar(){
     console.error('Error:', error);
     });
     formAdd.reset()
+}
+function chamarContato(id) {
+    fetch(API_URL + '/Telefones/' +id)
+    .then(function(resposta){
+        return resposta.json();
+    })
+    .then((contato) => {
+        editar_id.value = contato.id;
+        editar_nome.value = contato.nome;
+        editar_telefone.value = contato.numero;
+        editar_cidade.value = contato.cidade
+    })
+};
+async function editar(){
+    event.preventDefault();
+    let id = editar_id.value
+    let contato = {
+        nome: editar_nome.value,
+        numero: editar_telefone.value,
+        cidade: editar_cidade.value,
+    }
+    await fetch(API_URL + '/Telefones/' +id,{
+        method: 'PATCH',
+        headers: {
+            'Content-type': 'application/json',
+        },
+        body: JSON.stringify(contato)
+    }).then((response) => response.json())
+    .then((data) => {
+        alert("Contato editado com sucesso")
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        });
+    atualizarLista();
 }
 atualizarLista();
