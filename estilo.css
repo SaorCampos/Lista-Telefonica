@@ -1,0 +1,23 @@
+body.container{
+    background-color: #e2efe5;
+}
+h1{
+    color: #2c5938;
+}
+button.btn-primary{
+    color: #2c5938;
+    background-color: #8ab4f8;
+}
+th{
+    color: #2c5938;
+}
+div.offcanvas{
+    background-color: #e2efe5;
+}
+h5.offcanvas-title{
+    color: #2c5938;
+}
+button.btn-secondary{
+    color: #2c5938;
+    background-color: #768eb4;
+}
