@@ -94,5 +94,7 @@ async function editar(){
         console.error('Error:', error);
         });
     atualizarLista();
+    let x = document.querySelector('[data-bs-dismiss="modal"]');
+    x.dispatchEvent(new Event('click'));
 }
 atualizarLista();
