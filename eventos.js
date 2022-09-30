@@ -17,7 +17,7 @@ function atualizarLista() {
                     <button onclick="excluir(${cadaContato.id})" class="btn btn-danger">
                         Excluir
                     </button>
-                    <button onclick="chamarContato(${cadaContato.id})" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <button onclick="chamarContato(${cadaContato.id})" type="button" class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditar">
                     Editar
                     </button>
                 </td>
@@ -94,7 +94,7 @@ async function editar(){
         console.error('Error:', error);
         });
     atualizarLista();
-    let x = document.getElementById('fecharModal');
+    let x = document.getElementById('fecharOffcanvas');
     x.dispatchEvent(new Event('click'));
 }
 atualizarLista();

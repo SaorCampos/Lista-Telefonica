@@ -11,7 +11,7 @@
     
     <h1 class="mt-5">Lista Telefonica</h1>
     <div class="text-end mb-3">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCriar" aria-controls="offcanvasExample">
             Adicionar Contato
         </button>
     </div>
@@ -29,49 +29,45 @@
 
         </tbody>
     </table>
-    <!-- Modal de adicionar -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Novo Contato</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+    <!-- offcanvas de adicionar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCriar" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Novo Contato</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body-content">
             <form id="formAdd" onsubmit="criar()" action="">
-                <div class="modal-body">
+                <div class="offcanvas-body">
                     <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){2,}" id="input_nome" placeholder="Nome">
                     <input type="number" class="form-control-lg mb-3" pattern="[0-9]{8,}" id="input_telefone" placeholder="Telefone">
                     <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){3,}" id="input_cidade" placeholder="Cidade">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <div class="offcanvas-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Fechar</button>
                     <button type="submit" class="btn btn-primary">Salvar alterções</button>
                 </div>
             </form>
-            </div>
         </div>
     </div>
     <!-- Modal de edição -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Contato</h5>
-                    <button type="button" id="fecharModal"  data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
-                </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEditar" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Editar Contato</h5>
+            <button id="fecharOffcanvas" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body-content">
             <form id="formEdit" onsubmit="editar()" action="">
-                <div class="modal-body">
+                <div class="offcanvas-body">
                     <input type="hidden" class="form-control-lg mb-3" id="editar_id">
                     <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){2,}" id="editar_nome" placeholder="Nome">
-                    <input type="number" class="form-control-lg mb-3" pattern="[0-9]{8,}" id="editar_telefone" placeholder="Telefone">
-                    <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){3,}" id="editar_cidade" placeholder="Cidade">
+                        <input type="number" class="form-control-lg mb-3" pattern="[0-9]{8,}" id="editar_telefone" placeholder="Telefone">
+                        <input type="text" class="form-control-lg mb-3" pattern="(?=.*[A-Z])(?=.*[a-z]){3,}" id="editar_cidade" placeholder="Cidade">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <div class="offcanvas-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Fechar</button>
                     <button type="submit" class="btn btn-primary">Salvar alterções</button>
                 </div>
             </form>
-            </div>
         </div>
     </div>
 
