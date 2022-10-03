@@ -43,7 +43,7 @@ function criar(){
         cidade: document.getElementById('input_cidade').value,
     }
     if(contato.nome ==="" || contato.numero ==="" || contato.cidade ===""){
-        alert('Dados invalidos');
+        alert('Preencha todos os campos');
         return;
     }
     fetch(API_URL +'/Telefones', {

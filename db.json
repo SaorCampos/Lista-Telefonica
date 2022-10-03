@@ -35,6 +35,18 @@
       "numero": "97143050",
       "cidade": "Fortaleza",
       "id": 6
+    },
+    {
+      "nome": "Agiota",
+      "numero": "976543821",
+      "cidade": "Maracanaú",
+      "id": 7
+    },
+    {
+      "nome": "Bicheiro",
+      "numero": "976543281",
+      "cidade": "Fortaleza",
+      "id": 8
     }
   ]
 }
