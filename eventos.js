@@ -1,11 +1,12 @@
 const API_URL = 'http://localhost:8000'
 function atualizarLista() {
-    tabela_contatos.innerHTML = ""
+    tabela_contatos.innerHTML = "<div class='spinner-border' role='status'></div>"
     fetch(API_URL +'/Telefones')
     .then(function(resposta){
         return resposta.json();
     })
     .then(function(lista){
+        tabela_contatos.innerHTML = "";
         lista.forEach(function (cadaContato){
             tabela_contatos.innerHTML += `
             <tr>
