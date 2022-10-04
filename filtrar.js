@@ -7,8 +7,8 @@ function filtrar(){
         }
         let colunaNome = linhas[posicao].children[1].innerText.toLowerCase();
         let colunaNumero = linhas[posicao].children[2].innerText.toLowerCase();
-        let colunas = colunaNome + colunaNumero;
-        if (colunas.includes(expressao)){
+        let dadosContato = colunaNome + colunaNumero;
+        if (dadosContato.includes(expressao)){
             linhas[posicao].style.display = '';
         }else{
             linhas[posicao].style.display = 'none';
