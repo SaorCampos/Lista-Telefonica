@@ -15,3 +15,9 @@ function filtrar(){
         }
     }
 }
+let counter = 0;
+let timer = null;
+function filtrarDebounce(){
+    clearTimeout(timer);
+    timer = setTimeout(filtrar(), 1000)
+}
